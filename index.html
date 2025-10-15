@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Haodong Li | Researcher & Aspiring Intern</title>
+  <title>Haodong Li | Doctoral Researcher — AI & Medical Imaging</title>
   <meta name="description" content="Haodong Li — AI & Medical Imaging researcher focusing on diffusion models and CT reconstruction." />
   <style>
     :root{
@@ -34,8 +34,8 @@
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",
+      Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
       background:var(--bg); color:var(--text); line-height:1.65;
     }
     a{color:var(--brand); text-decoration:none}
@@ -47,13 +47,13 @@
     header{
       background:var(--brand); color:#fff; padding:2rem 0; text-align:center;
     }
-    header h1{margin:.1rem 0 0; font-size:clamp(28px, 4.2vw, 40px)}
+    header h1{margin:.1rem 0 0; font-size:clamp(28px,4.2vw,40px)}
     header p{margin:.4rem 0 0; opacity:.95}
 
     /* Nav */
     .site-nav{
       position:sticky; top:0; z-index:50;
-      background: rgba(0,0,0,.82);
+      background:rgba(0,0,0,.82);
       backdrop-filter:saturate(150%) blur(6px);
     }
     .nav-inner{
@@ -79,64 +79,38 @@
     .card{
       background:var(--card); padding:1.3rem 1.5rem; margin-bottom:1.2rem;
       border-radius:var(--radius); box-shadow:var(--shadow);
-      border:1px solid rgba(0,0,0,.05);
-      width:100%; /* ensure cards span full container width */
+      border:1px solid rgba(0,0,0,.05); width:100%;
     }
-
-    /* Remove text width limit to avoid blank space */
-    .card p, .card li, .card ul, .card ol { max-width: none !important; }
-
-    /* Optionally limit only on very wide screens for readability */
-    @media (min-width:1600px){
-      .card p, .card li { max-width:95ch; }
-    }
-
     .card ul{padding-left:1.1rem; margin:.5rem 0}
     .card li{margin:.45rem 0}
 
     /* About Me image + flex */
-    .about-flex {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .about-pic {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-    }
+    .about-flex{display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem; flex-wrap:wrap}
+    .about-pic{width:180px; height:180px; object-fit:cover; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.1); flex-shrink:0}
     .about-text{flex:1 1 320px; min-width:280px}
+    @media (max-width:720px){ .about-flex{flex-direction:column; text-align:left} .about-pic{margin-bottom:1rem} }
 
-    @media (max-width: 720px) {
-      .about-flex { flex-direction: column; text-align: left; }
-      .about-pic { margin-bottom: 1rem; }
-    }
+    .stack{display:flex; flex-direction:column; gap:1.2rem}
 
-    .stack { display:flex; flex-direction:column; gap:1.2rem }
+    /* Buttons / helpers (fix) */
+    .muted{color:var(--muted)}
+    .actions{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.4rem}
+    .btn{display:inline-flex; align-items:center; gap:.35rem; background:var(--brand); color:#fff; padding:.45rem .7rem; border-radius:10px; font-weight:700}
+    .btn:hover{background:var(--brand-600); text-decoration:none}
+    .btn-secondary{background:transparent; color:var(--brand); border:1.5px solid var(--brand)}
 
     /* Footer */
     footer{background:#333; color:#fff; text-align:center; padding:1rem}
 
     /* Skip link */
-    .skip{
-      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
-    }
-    .skip:focus{
-      left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem;
-      background:#fff; color:#000; border-radius:8px; box-shadow:var(--shadow);
-    }
-      /* Improve list readability and wrapping */
-    .card ul{ padding-left:1.2rem; margin:.5rem 0; }
-    .card li{ margin:.4rem 0; }
-    .card li > ul{ margin:.35rem 0 .6rem 1.1rem; }
+    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem; background:#fff; color:#000; border-radius:8px; box-shadow:var(--shadow)}
 
-    /* Avoid awkward hyphen/autowrap behavior */
-    .card p, .card li{ hyphens: manual; word-break: normal; overflow-wrap: anywhere; }
+    /* Readability + wrapping */
+    .card ul{ padding-left:1.2rem; margin:.5rem 0 }
+    .card li{ margin:.4rem 0 }
+    .card li > ul{ margin:.35rem 0 .6rem 1.1rem }
+    .card p, .card li{ hyphens:manual; word-break:normal; overflow-wrap:anywhere }
   </style>
 </head>
 <body>
@@ -145,7 +119,7 @@
   <header>
     <div class="container">
       <h1>Haodong Li</h1>
-      <p>Researcher in Electrical & Computer Engineering • AI & Medical Imaging Enthusiast</p>
+      <p>Doctor of Engineering student in ECE @ UMass Lowell • AI & Medical Imaging (diffusion transformers, probabilistic generative models)</p>
     </div>
   </header>
 
@@ -168,8 +142,7 @@
         <div class="card about-flex">
           <img src="image.jpg" alt="Haodong Li" class="about-pic" />
           <div class="about-text">
-            <p>Hello! I am Haodong Li, a dedicated researcher and engineer with a strong background in Electrical and Computer Engineering. My passion lies in advancing artificial intelligence and deep generative models to solve challenging inverse problems in medical imaging and precision healthcare.</p>
-            <p>I strive to merge cutting-edge research with practical applications, making significant contributions in fields such as CT image reconstruction, segmentation of medical images, and the integration of large language models with advanced vision tasks.</p>
+            <p>I’m a Doctor of Engineering student in Electrical &amp; Computer Engineering at the University of Massachusetts Lowell, advised by Prof. Hengyong Yu. My work bridges practical and theoretical machine learning for medical imaging, focusing on probabilistic generative models and diffusion transformers for sparse/limited-view CT reconstruction and segmentation. Recently, I’ve been exploring residual-guided iterative solvers and LLM-guided priors to make reconstructions more robust, data-consistent, and clinically useful.</p>
           </div>
         </div>
       </div>
@@ -188,26 +161,27 @@
             <li>Leveraging large language models for innovative medical AI image applications.</li>
           </ul>
         </div>
-        
+
         <div class="card project">
           <h3>CDPIR: Cross-Distribution Diffusion Priors-Driven Iterative Reconstruction for Sparse-View CT</h3>
-          <p class="muted">First‑author journal paper — under review at <em>IEEE Transactions on Medical Imaging (TMI)</em></p>
+          <p class="muted">First-author journal paper — under review at <em>IEEE Transactions on Medical Imaging (TMI)</em></p>
           <ul class="meta">
             <li><strong>Authors:</strong> Haodong Li, Shuo Han, Haiyang Mao, Yu Shi, Changsheng Fang, Jianjia Zhang, Weiwen Wu, Hengyong Yu</li>
-            <li><strong>Keywords:</strong> Sparse‑view CT, diffusion transformer (SiT), classifier‑free guidance, ASD‑POCS, OOD robustness</li>
+            <li><strong>Keywords:</strong> Sparse-view CT, diffusion transformer (SiT), classifier-free guidance, ASD-POCS, OOD robustness</li>
           </ul>
-          <p><strong>What we propose.</strong> A domain‑adaptive reconstruction framework that marries diffusion‑transformer priors with physics‑based iterative updates. The model disentangles <em>domain‑invariant</em> priors for anatomy and <em>domain‑specific</em> priors for texture/edges, then alternates denoising with data‑consistency to suppress streak artifacts and preserve details under distribution shifts.</p>
+          <p><strong>What we propose.</strong> A domain-adaptive reconstruction framework that marries diffusion-transformer priors with physics-based iterative updates. The model disentangles <em>domain-invariant</em> priors for anatomy and <em>domain-specific</em> priors for texture/edges, then alternates denoising with data-consistency to suppress streak artifacts and preserve details under distribution shifts.</p>
           <ul>
-            <li><strong>Method:</strong> SiT‑based velocity/score sampling under a unified stochastic interpolant; classifier‑free guidance; residual‑guided alternating solver with improved ASD‑POCS.</li>
-            <li><strong>Datasets:</strong> AAPM Low‑Dose CT, Stanford COCA, XCAT phantom, GE clinical cardiac, and MARS PCCT extremity.</li>
-            <li><strong>Results (highlights):</strong> State‑of‑the‑art OOD performance; +2–3 dB PSNR and up to +0.10 SSIM vs. baselines across OOD tests; +0.07 SSIM on GE clinical cardiac (zero‑shot); about +3.5 dB PSNR and +0.05 SSIM on MARS PCCT; competitive quality with as few as 200 sampling steps.</li>
+            <li><strong>Method:</strong> SiT-based velocity/score sampling under a unified stochastic interpolant; classifier-free guidance; residual-guided alternating solver with improved ASD-POCS.</li>
+            <li><strong>Datasets:</strong> AAPM Low-Dose CT, Stanford COCA, XCAT phantom, GE clinical cardiac, and MARS PCCT extremity.</li>
+            <li><strong>Results (highlights):</strong> State-of-the-art OOD performance; +2–3 dB PSNR and up to +0.10 SSIM vs. baselines across OOD tests; +0.07 SSIM on GE clinical cardiac (zero-shot); about +3.5 dB PSNR and +0.05 SSIM on MARS PCCT; competitive quality with as few as 200 sampling steps.</li>
           </ul>
           <div class="actions">
             <a class="btn" href="https://www.arxiv.org/abs/2509.13576" target="_blank" rel="noopener">View on arXiv</a>
             <a class="btn btn-secondary" href="#contact">Contact me</a>
           </div>
         </div>
-<div class="card">
+
+        <div class="card">
           <h3>Research Experience</h3>
           <ul>
             <li>
@@ -289,9 +263,9 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="card">
-          <p>Email: <a href="mailto:Haodong_li@uml.edu">Haodong_li@uml.edu</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/your-username/" target="_blank" rel="noopener">LinkedIn Profile</a></p>
-          <p>GitHub: <a href="https://graeme-lee.github.io/haodong.github.io/" target="_blank" rel="noopener">GitHub Profile</a></p>
+          <p>Email: <a href="mailto:haodong_li@uml.edu">haodong_li@uml.edu</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/haodong-li-076934246/" target="_blank" rel="noopener">linkedin.com/in/haodong-li-076934246</a></p>
+          <p>GitHub: <a href="https://github.com/chuwd19" target="_blank" rel="noopener">github.com/chuwd19</a></p>
         </div>
       </div>
     </section>
